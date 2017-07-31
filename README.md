@@ -20,7 +20,7 @@ UPS Shipping Rates works on Craft 2.6.x.
 
 ## Overview
 
-The UPS Shipping Rates plugin provides UPS shipping methods to Craft Commerce. UPS shipping methods can be enabled indvidually and will be displayed, along with any other configured shipping option, at checkout.
+The UPS Shipping Rates plugin provides UPS shipping methods to Craft Commerce. UPS shipping methods can be enabled individually and will be displayed, along with any other configured shipping option, at checkout.
 
 UPS shipping rates are calculated live, via the UPS Rating API, for both U.S. Domestic and International addresses using the supplied customer address.
 
