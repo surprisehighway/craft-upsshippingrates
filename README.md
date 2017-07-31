@@ -1,20 +1,20 @@
 # UPS Shipping Rates plugin for Craft Commerce.
 
-Adds UPS shipping methods and live rates to Craft Commerce. Inspired by Pixel and Tonic's [Easy Post](https://github.com/pixelandtonic/CommerceEasyPost).
+Adds UPS shipping methods and live rates to Craft Commerce. Inspired by Pixel & Tonic's [Easy Post](https://github.com/pixelandtonic/CommerceEasyPost).
 
 ![Screenshot](resources/screenshot.png)
 
-This is plugin is in beta and bugs may be present. Please document any issues you encounter at our [Github Issues](https://github.com/surprisehighway/craft-upsshippingrates/issues) page.
+This plugin is in beta and bugs may be present. Please document any issues you encounter at our [Github Issues](https://github.com/surprisehighway/craft-upsshippingrates/issues) page.
 
 ## Installation
 
-To install the UPS Shipping Rates plugint, follow these steps:
+To install the UPS Shipping Rates plugin follow these steps:
 
 1. Download & unzip the file and place the `upsshippingrates` directory into your `craft/plugins` directory
 2.  -OR- do a `git clone https://github.com/surprisehighway/craft-upsshippingrates.git upsshippingrates` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 3.  -OR- install with Composer via `composer require surprisehighway/craft-upsshippingrates`
 4. Install plugin in the Craft Control Panel under Settings > Plugins
-5. The plugin folder should be named `upsshippingrates` for Craft to see it.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
+5. The plugin folder should be named `upsshippingrates` for Craft to see it. GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
 
 UPS Shipping Rates works on Craft 2.6.x.
 
@@ -25,8 +25,6 @@ The UPS Shipping Rates plugin provides UPS shipping methods to Craft Commerce. U
 UPS shipping rates are calculated live, via the UPS Rating API, for both U.S. Domestic and International addresses using the supplied customer address.
 
 Generating shipping labels or other UPS services are not supported.
-
-![Shipping Methods](resources/shipping-methods.png)
 
 ## Configuring UPS Shipping Rates
 
@@ -53,6 +51,8 @@ UPS shipping rates will now be calculated for products that have dimensions and 
 ## Using UPS Shipping Rates
 
 After successfully configuring the plugin your shipping methods will appear within Craft Commerce's shipping method view at `/commerce/settings/shippingmethods`.
+
+![Shipping Methods](resources/shipping-methods.png)
 
 If the service is available for the customer's shipping address, a live rate will be returned during the checkout process.
 
