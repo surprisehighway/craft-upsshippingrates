@@ -1,0 +1,26 @@
+{
+	"name": "rmknecht/upsshippingrates",
+	"description": "Adds UPS shipping methods and rates to Craft Commerce.",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Rob Knecht",
+			"homepage": "https://github.com/rmknecht",
+			"role": "Developer"
+		},
+		{
+			"name": "Surprise Highway",
+			"homepage": "https://github.com/surprisehighway"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"CommerceUpsRates\\": "CommerceUpsRates"
+		}
+	},
+	"require": {
+		"composer/installers": "~1.0",
+		"gabrielbull/ups-api": "^0.7.12",
+		"php-units-of-measure/php-units-of-measure": "^2.1"
+	}
+}

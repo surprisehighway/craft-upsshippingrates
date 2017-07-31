@@ -1,0 +1,67 @@
+{#
+/**
+ * UPS Shipping Rates plugin for Craft CMS
+ *
+ * UPS Shipping Rates Settings.twig
+ *
+ * @author    Rob Knecht
+ * @copyright Copyright (c) 2017 Rob Knecht
+ * @link      https://github.com/rmknecht
+ * @package   UpsShippingRates
+ * @since     0.0.1
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{{ forms.textField({
+    label: 'UPS Production Access Key',
+    instructions: 'The production API key. Used when "devMode" is set to false.',
+    id: 'apiKey',
+    name: 'apiKey',
+    value: settings['apiKey'],
+    errors: settings.getErrors('apiKey')
+    })
+}}
+
+{{ forms.textField({
+    label: 'UPS Test Access Key',
+    instructions: 'Optional test access key. Used when "devMode" is set to true. If not supplied the production key is used.',
+    id: 'testApiKey',
+    name: 'testApiKey',
+    value: settings['testApiKey'],
+    errors: settings.getErrors('testApiKey')
+    })
+}}
+
+{{ forms.textField({
+    label: 'UPS Account Username',
+    instructions: 'Your UPS Account Username',
+    id: 'upsUsername',
+    name: 'upsUsername',
+    value: settings['upsUsername'],
+    errors: settings.getErrors('upsUsername')
+    })
+
+}}
+
+{{ forms.passwordField({
+    label: 'UPS Account Password',
+    instructions: 'Your UPS Account Password',
+    id: 'upsPassword',
+    name: 'upsPassword',
+    value: settings['upsPassword'],
+    errors: settings.getErrors('upsPassword')
+    })
+
+}}
+
+{{ forms.textField({
+    label: 'Mark-up Percentage',
+    instructions: 'Add an additonal price mark-up to the rates returned from UPS. Enter 0-100.',
+    id: 'markup',
+    name: 'markup',
+    value: settings['markup'],
+    errors: settings.getErrors('markup')
+    })
+}}
