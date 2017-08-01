@@ -10,8 +10,8 @@ use PhpUnitsOfMeasure\PhysicalQuantity\Mass;
  * UPS Shipping Rates
  *
  * @author    Rob Knecht
- * @copyright Copyright (c) 2017 Rob Knecht
- * @link      https://github.com/rmknecht
+ * @copyright Copyright (c) 2017 Surprise Highway
+ * @link      https://github.com/surprisehighway
  * @package   UpsShippingRates
  * @since     0.0.1
  */

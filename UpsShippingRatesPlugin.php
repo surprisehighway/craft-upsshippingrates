@@ -12,8 +12,8 @@ require __DIR__.'/vendor/autoload.php';
  * Calculates UPS shipping rates using UPS Rating API
  *
  * @author    Rob Knecht
- * @copyright Copyright (c) 2017 Rob Knecht
- * @link      https://github.com/rmknecht
+ * @copyright Copyright (c) 2017 Surprise Highway
+ * @link      https://github.com/surprisehighway
  * @package   UpsShippingRates
  * @since     0.0.1
  */
@@ -67,7 +67,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getDocumentationUrl()
     {
-        return 'https://github.com/rmknecht/upsshippingrates/blob/master/README.md';
+        return 'https://github.com/surprisehighway/craft-upsshippingrates/blob/master/README.md';
     }
 
     /**
@@ -79,7 +79,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/rmknecht/upsshippingrates/master/releases.json';
+        return 'https://raw.githubusercontent.com/surprisehighway/craft-upsshippingrates/master/releases.json';
     }
 
     /**
@@ -89,7 +89,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '0.0.1';
+        return '1.0.0';
     }
 
     /**
@@ -102,7 +102,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getSchemaVersion()
     {
-        return '0.0.1';
+        return '1.0.0';
     }
 
     /**
@@ -112,7 +112,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getDeveloper()
     {
-        return 'Rob Knecht';
+        return 'Surprise Highway';
     }
 
     /**
@@ -122,7 +122,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getDeveloperUrl()
     {
-        return 'https://github.com/rmknecht';
+        return 'https://github.com/surprisehighway';
     }
 
     /**
