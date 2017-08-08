@@ -48,13 +48,21 @@ Once you have obtained the above:
 
 UPS shipping rates will now be calculated for products that have dimensions and weights specified.
 
-## Using UPS Shipping Rates
+## Using UPS Shipping Rates in Craft Commerce
 
 After successfully configuring the plugin your shipping methods will appear within Craft Commerce's shipping method view at `/commerce/settings/shippingmethods`.
 
 ![Shipping Methods](resources/shipping-methods.png)
 
-If the service is available for the customer's shipping address, a live rate will be returned during the checkout process.
+
+**A weight value is required for product and variants entries to calcuate shipping costs.**
+
+![Shipping Methods](resources/weight-input.png)
+
+The UPS Shipping Rates plugin will automatically convert from the "Weight Unit" specified in Craft Commerce's settings at `/commerce/settings/general`
+. Width, Length, and Height dimensions are not required; however, large shipments should included these values to generate an accurate shipping rate.
+
+If the a UPS service is available for the customer's shipping address, a live rate will be returned during the checkout process.
 
 ## Roadmap
 
