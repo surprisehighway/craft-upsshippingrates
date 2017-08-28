@@ -179,7 +179,15 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 
 		$shipment->addPackage($package);
 
-		return $rate->shopRates($shipment);
+		$rates = false;
+
+		try {
+			$rates = $rate->shopRates($shipment);
+		} catch (\Exception $e) {
+			UpsShippingRatesPlugin::log('Caught exception: '.  $e->getMessage(),  LogLevel::Error);
+		}
+
+		return $rates;
 	}
 
 	// Returns a hash dervied from our order's properties.
