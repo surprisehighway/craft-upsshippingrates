@@ -24,7 +24,7 @@ The UPS Shipping Rates plugin provides UPS shipping methods to Craft Commerce. U
 
 UPS shipping rates are calculated live, via the UPS Rating API, for both U.S. Domestic and International addresses using the supplied customer address.
 
-Generating shipping labels or other UPS services are not supported.
+UPS Freight services are not currently supported.
 
 ## Configuring UPS Shipping Rates
 
@@ -67,6 +67,7 @@ If the a UPS service is available for the customer's shipping address, a live ra
 ## Roadmap
 
 * Improve the box packing algorithm
+* Support rates for UPS Freight services
 * Support flat rate and UPS Envelopes
 
 Brought to you by [Rob Knecht](https://github.com/rmknecht) and [Surprise Highway](http://www.surprisehighway.com/)
