@@ -1,4 +1,12 @@
 [
+	{
+	    "version": "1.0.1",
+	    "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/master.zip",
+	    "date": "2017-08-27T21:51:36.363Z",
+	    "notes": [
+	        "[Improved] Catch request exceptions"
+	    ]
+	},
     {
         "version": "1.0.0",
         "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/master.zip",
