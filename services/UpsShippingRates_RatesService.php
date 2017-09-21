@@ -75,7 +75,9 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 		return $this->_shipmentsBySignature[$signature];
 	}
 
-	// Creates a new UPS shipment
+	/* Creates a new UPS shipment
+	* @return Ups\Entity\RateResponse Object
+	*/
 	private function _createShipment($order)
 	{
 		$upsSettings = craft()->plugins->getPlugin('upsshippingrates')->getSettings();
@@ -91,7 +93,14 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 			craft()->security->decrypt(base64_decode($upsSettings->upsPassword)) // encrypted password
 		);
 
+
+		// Specify our Account Number
+		$shipper = new \Ups\Entity\Shipper();
+		$shipper->setShipperNumber($upsSettings->upsUsername);
+
 		$shipment = new \Ups\Entity\Shipment();
+		$shipment->setShipper($shipper);
+
 
 		// From address
 		$from_address_params = craft()->config->get('fromAddress', 'upsshippingrates');
@@ -104,6 +113,8 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 			return false;
 		}
 
+
+		// Origin Address
 		$to_address_params = [
 			"name"           => $shippingAddress->getFullName(),
 			"street1"        => $shippingAddress->address1,
@@ -119,7 +130,6 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 			"federal_tax_id" => $shippingAddress->businessTaxId
 		];
 
-		// Origin Address
 		$shipperAddress = $shipment->getShipper()->getAddress();
 
 		$shipperAddress->setAddressLine1($from_address_params['street1']);
@@ -140,6 +150,11 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 		$shipToAddress->setStateProvinceCode($to_address_params['state']);
 		$shipToAddress->setPostalCode($to_address_params['zip']);
 		$shipToAddress->setCountryCode($to_address_params['country']);
+
+
+		// Delivery address is residential
+		$shipToAddress->setResidentialAddressIndicator(true);
+
 
 		// Packaging
 		$settings = craft()->plugins->getPlugin('commerce')->getSettings();
@@ -178,6 +193,13 @@ class UpsShippingRates_RatesService extends BaseApplicationComponent
 		$package->setDimensions($dimensions);
 
 		$shipment->addPackage($package);
+
+		$shipment->setNumOfPiecesInShipment(1);
+
+		// Include account's negotiates rates in the response.
+		$shipment->showNegotiatedRates();
+
+		$ratingMethodRequestIndicator = new \Ups\Entity\RateInformation;
 
 		$rates = false;
 

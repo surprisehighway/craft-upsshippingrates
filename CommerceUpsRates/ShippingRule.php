@@ -28,16 +28,21 @@ class ShippingRule implements CommerceShippingRule
 
 		if ($this->_rate)
 		{
-			// if (isset($this->_rate->deliveryDays'))
-			// {
-			// 	$this->_description = $this->_description.". Delivered in ".$rate->delivery_days." days. ";
-			// }
 
 			$settings = \Craft\craft()->plugins->getPlugin('upsshippingrates')->getSettings();
 
 			$rateType = \Craft\craft()->config->get('useRate', 'upsshippingrates');
 
-			$amount = $rate->TotalCharges->MonetaryValue;
+
+			if ( $settings->showNegotiatedRates && isset( $rate->NegotiatedRates->NetSummaryCharges->GrandTotal->MonetaryValue ))
+			{
+				// Show Negotiated Rates is enabld and a negotiated rate exists.
+ 				$amount = $rate->NegotiatedRates->NetSummaryCharges->GrandTotal->MonetaryValue;
+			}
+			else
+			{
+				$amount = $rate->TotalCharges->MonetaryValue;
+			}
 
 			if ($settings->markup > 0 && $settings->markup <= 100)
 			{
