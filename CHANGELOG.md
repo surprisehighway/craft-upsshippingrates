@@ -1,5 +1,12 @@
 # UPS Shipping Rates Changelog
 
+## 1.0.2 -- 2017.09.21
+
+### Improved
+
+* Added account number to rate request
+* Added the ability to show negotiated rates to customers
+
 ## 1.0.1 -- 2017.08.27
 
 ### Improved

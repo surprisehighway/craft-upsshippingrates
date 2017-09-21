@@ -1,7 +1,16 @@
 [
 	{
+	    "version": "1.0.2",
+	    "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/1.0.2.zip",
+	    "date": "2017-09-21T21:51:36.363Z",
+	    "notes": [
+	    	"[Improved] Added account number to rate request",
+	        "[Improved] Added the ability to show negotiated rates to customers"
+	    ]
+	},
+	{
 	    "version": "1.0.1",
-	    "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/master.zip",
+	    "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/1.0.1.zip",
 	    "date": "2017-08-27T21:51:36.363Z",
 	    "notes": [
 	        "[Improved] Catch request exceptions"
@@ -9,7 +18,7 @@
 	},
     {
         "version": "1.0.0",
-        "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/master.zip",
+        "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/1.0.0.zip",
         "date": "2017-06-13T21:51:36.363Z",
         "notes": [
             "[Added] Initial release"

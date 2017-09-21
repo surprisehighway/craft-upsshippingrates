@@ -89,7 +89,7 @@ class UpsShippingRatesPlugin extends BasePlugin
      */
     public function getVersion()
     {
-        return '1.0.1';
+        return '1.0.2';
     }
 
     /**
@@ -202,6 +202,12 @@ class UpsShippingRatesPlugin extends BasePlugin
                 AttributeType::String,
                 'label'     => 'UPS Account Password',
                 'required'  => true
+            ],
+
+            'showNegotiatedRates' => [
+                AttributeType::Bool,
+                'label'     => 'Show Negotiated Rates',
+                'default'   => FALSE
             ],
 
             'markup' => [

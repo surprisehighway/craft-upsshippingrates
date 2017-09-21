@@ -56,6 +56,23 @@
 
 }}
 
+<div class="field">
+    <div class="heading">
+        <label id="settings-showNegotiatedRates-label" for="settings-showNegotiatedRates">Show Negotiated Rates</label>
+        <div class="instructions">
+            <p>Toggle to show negotiated rates for the provided UPS account to the customer.</p>
+        </div>
+    </div>
+    {{ forms.lightswitch({
+        id: 'showNegotiatedRates',
+        name: 'showNegotiatedRates',
+        on: settings['showNegotiatedRates'],
+        errors: settings.getErrors('showNegotiatedRates')
+        })
+    }}
+</div>
+
+
 {{ forms.textField({
     label: 'Mark-up Percentage',
     instructions: 'Add an additonal price mark-up to the rates returned from UPS. Enter 0-100.',
