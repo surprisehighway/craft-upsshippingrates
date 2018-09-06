@@ -2,7 +2,7 @@
     "name": "surprisehighway/upsshippingrates",
     "description": "Adds UPS shipping methods and rates to Craft Commerce.",
     "type": "craft-plugin",
-    "version": "2.0.0-beta.4",
+    "version": "2.0.0-beta",
     "keywords": [
         "craft",
         "cms",
