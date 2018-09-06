@@ -1,8 +1,10 @@
 # UPS Shipping Rates plugin for Craft CMS 3.x & Craft Commerce 2.x
 
-Adds UPS shipping methods and live rates to Craft Commerce.
+Adds UPS shipping methods and live rates to Craft Commerce 2.
 
-![Screenshot](resources/img/plugin-logo.png)
+![Screenshot](resources/screenshot.png)
+
+This plugin is in beta and bugs may be present. Please document any issues you encounter at our [Github Issues](https://github.com/surprisehighway/craft-upsshippingrates/issues) page.
 
 ## Requirements
 
@@ -61,7 +63,7 @@ After successfully configuring the plugin your shipping methods will appear as s
 
 **A weight value is required for product and variants entries to calcuate shipping costs.**
 
-![Shipping Methods](resources/weight-input.png)
+![Weight input](resources/weight-input.png)
 
 The UPS Shipping Rates plugin will automatically convert from the "Weight Unit" specified in Craft Commerce's settings at `/commerce/settings/general`
 . Width, Length, and Height dimensions are not required; however, large shipments should included these values to generate an accurate shipping rate.
