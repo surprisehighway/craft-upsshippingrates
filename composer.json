@@ -1,26 +1,46 @@
 {
-	"name": "surprisehighway/craft-upsshippingrates",
-	"description": "Adds UPS shipping methods and rates to Craft Commerce.",
-	"type": "craft-plugin",
-	"authors": [
-		{
-			"name": "Rob Knecht",
-			"homepage": "https://github.com/rmknecht",
-			"role": "Developer"
-		},
-		{
-			"name": "Surprise Highway",
-			"homepage": "https://github.com/surprisehighway"
-		}
-	],
-	"autoload": {
-		"psr-4": {
-			"CommerceUpsRates\\": "CommerceUpsRates"
-		}
-	},
-	"require": {
-		"composer/installers": "~1.0",
-		"gabrielbull/ups-api": "^0.7.12",
-		"php-units-of-measure/php-units-of-measure": "^2.1"
-	}
+    "name": "surprisehighway/upsshippingrates",
+    "description": "Adds UPS shipping methods and rates to Craft Commerce.",
+    "type": "craft-plugin",
+    "version": "2.0.0-beta.4",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "ups shipping rates"
+    ],
+    "support": {
+        "docs": "https://github.com/https://github.com/surprisehighway/craft-upsshippingrates/blob/master/README.md",
+        "issues": "https://github.com/https://github.com/surprisehighway/craft-upsshippingrates/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Surprise Highway",
+            "homepage": "https://github.com/surprisehighway"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1",
+        "gabrielbull/ups-api": "^0.8.0",
+        "php-units-of-measure/php-units-of-measure": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+          "surprisehighway\\upsshippingrates\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "UPS Shipping Rates",
+        "handle": "upsshippingrates",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/https://github.com/surprisehighway/craft-upsshippingrates/master/CHANGELOG.md",
+        "components": {
+            "rates": "surprisehighway\\upsshippingrates\\services\\Rates",
+            "shippingMethods": "surprisehighway\\upsshippingrates\\services\\ShippingMethods"
+        },
+        "class": "surprisehighway\\upsshippingrates\\UpsShippingRates"
+    }
 }

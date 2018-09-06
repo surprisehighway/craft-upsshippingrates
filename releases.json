@@ -1,4 +1,12 @@
 [
+    {
+        "version": "2.0.0-beta",
+        "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/2.0.0-beta.zip",
+        "date": "2018-08-06T16:31:36.363Z",
+        "notes": [
+            "[Added] Initial Commerce 2 Beta Release"
+        ]
+    },
 	{
 	    "version": "1.0.2",
 	    "downloadUrl": "https://github.com/surprisehighway/craft-upsshippingrates/archive/1.0.2.zip",

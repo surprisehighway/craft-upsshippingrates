@@ -1,12 +1,12 @@
 <?php
 
 /**
-* Copy and place within your craft config directoy at /craft/config/upsshippingrates.php
+* Copy and place within your craft config directoy at ./config/upsshippingrates.php
 * Be sure to rename the config file 'upsshippingrates.php'
 */
 
 return [
-	// The address you will be posting from.
+	// The address you will be shipping from.
 	'fromAddress' => [
 		"name"    => "John Doe",
 		"street1" => "201 E Randolph St",
